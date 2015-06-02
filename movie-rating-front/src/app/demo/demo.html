@@ -1,0 +1,47 @@
+<div class="container">
+
+  <div ng-include="'app/components/navbar/navbar.html'"></div>
+
+  <div>
+    Movies
+    <table class="table table-hover table-striped table-condensed">
+      <tr>
+        <td>Title</td>
+      </tr>
+      <tr ng-repeat="movie in demo.movies">
+        <td>{{ movie.title }}</td>
+      </tr>
+    </table>
+    
+    Users
+    <table class="table table-hover table-striped table-condensed">
+      <tr>
+        <th>Id</th>
+        <th>Gender</th>
+        <th>zipCode</th>
+      </tr>
+      <tr ng-repeat="user in demo.users">
+        <td>{{ user.id }}</td>
+        <td>{{user.gender}}</td>
+        <td>{{user.zipCode}}</td>
+      </tr>
+    </table>
+    
+    Películas con 5 estrellas del usuario con id: #16:0
+    <table class="table table-hover table-striped table-condensed">
+      <tr>
+        <th>Title</th>
+      </tr>
+      <tr ng-repeat="movie in demo.popularMovies">
+        <td>{{ movie.title }}</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <hr>
+
+  <div class="footer">
+    <p><a href="https://twitter.com/data4">Data4</a></p>
+  </div>
+</div>
